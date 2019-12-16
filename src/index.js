@@ -148,7 +148,7 @@ export default class YoutubePlayback extends Playback {
   }
 
   seekPercentage(percentage) {
-    if (!this.player) return
+    if (!this.player || !this.player.getDuration) return
     let duration = this.player.getDuration()
     let time = percentage * duration / 100
     this.seekTo(time)
@@ -179,7 +179,7 @@ export default class YoutubePlayback extends Playback {
 
   getDuration() {
     let duration = 0
-    if (this.player) {
+    if (this.player && this.player.getDuration) {
       duration = this.player.getDuration()
     }
     return duration

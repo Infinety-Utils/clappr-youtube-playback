@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - node
+  - lts/*
+deploy:
+  provider: npm
+  email: nihey.takizawa@gmail.com
+  api_key:
+    secure: lb25vZNPxU/dOeq4zGTF85FLD5CXNg9i7NKNQkb5hljNz/x1kUE2M+dDoEuzfDcJSZIhUC6rpHXpn8XYI/7chyHg0kxSoPrh1rLXUK3pgd+Z/4MErtjlSbb8M59SV1k56MBt1vitCfBbNmoSFWjmuojNvseKKiDAUlekuSnkk+Vctjgmol8cVIk6DeSLlAQihdv4yy7N+NWu6NTiCP5tzhy7JkzTRMGjm9UUBNnZnInhKfqIx9b+AMsIPAZDbyfiLsCy3V5eQj/QlCPIs90lWIWUlAP6ypguidsmFsGH7vQ9e7450wYH8/5hoU3CNhBs9rgUSBo3I7T/hg+UWzbpKpJveI6225m4EAN8MASDlNCWROVL8APuremrIQOarPTMj59yqykG6URCEZ3qsVSOudrEKjI8BTpyiFe5MoETFQHlVs6pIF5/uXI4gtwoaigw0J/K2cd44QUMtEcBSOTa8z0Vzzf4tfmYirH3KWB4JN/xH7/C/BkWJZzVuvcT/nFE+qnUjvEeDqFF1RLejwAEUqZEVppvaH9HzrxUmvAg5cdD6N5smfMY33wTCure3HEDZ1iKOaDcFlBFRKBoJK4M6m5ux/ZULJfq99cYIXFA2BZN0Vr8DtvEz0/5BvEH/k/p/5iq2d0H+YZuAWF895BYeOL/K/WsGzu6WRWvzH2u8XA=
+  on:
+    tags: true
+    repo: KasselLabs/clappr-youtube-playback

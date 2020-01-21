@@ -82,7 +82,13 @@ export default class YoutubePlayback extends Playback {
 
   ready() {
     this._ready = true
-    this.trigger(Events.PLAYBACK_READY)
+
+    if (!this.player) {
+      this.setupYoutubePlayer()
+    } else {
+      this.pause()
+      this.trigger(Events.PLAYBACK_READY)
+    }
   }
 
   qualityChange(event) { // eslint-disable-line no-unused-vars

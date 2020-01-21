@@ -1,6 +1,6 @@
 {
   "name": "clappr-youtube-playback",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/clappr-youtube-playback.js",
   "scripts": {
     "release": "node_modules/.bin/webpack --progress -d --optimize-minimize --optimize-dedupe --output-filename youtube_playback.min.js",

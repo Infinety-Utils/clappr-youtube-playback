@@ -205,7 +205,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'ready',
 	    value: function ready() {
 	      this._ready = true;
-	      this.trigger(_Clappr.Events.PLAYBACK_READY);
+
+	      if (!this.player) {
+	        this.setupYoutubePlayer();
+	      } else {
+	        this.pause();
+	        this.trigger(_Clappr.Events.PLAYBACK_READY);
+	      }
 	    }
 	  }, {
 	    key: 'qualityChange',
@@ -290,7 +296,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'seekPercentage',
 	    value: function seekPercentage(percentage) {
-	      if (!this.player) return;
+	      if (!this.player || !this.player.getDuration) return;
 	      var duration = this.player.getDuration();
 	      var time = percentage * duration / 100;
 	      this.seekTo(time);
@@ -327,7 +333,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'getDuration',
 	    value: function getDuration() {
 	      var duration = 0;
-	      if (this.player) {
+	      if (this.player && this.player.getDuration) {
 	        duration = this.player.getDuration();
 	      }
 	      return duration;

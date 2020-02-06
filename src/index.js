@@ -29,7 +29,8 @@ export default class YoutubePlayback extends Playback {
       default: ['seekbar'],
       right:['fullscreen','volume', 'hd-indicator']
     }
-    Mediator.on(Events.PLAYER_RESIZE, this.updateSize, this)
+    const { playerId } = options
+    Mediator.on(`${playerId}:${Events.PLAYER_RESIZE}`, this.updateSize, this)
     this.embedYoutubeApiScript()
   }
 

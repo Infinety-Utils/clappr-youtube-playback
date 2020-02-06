@@ -130,7 +130,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      'default': ['seekbar'],
 	      right: ['fullscreen', 'volume', 'hd-indicator']
 	    };
-	    _Clappr.Mediator.on(_Clappr.Events.PLAYER_RESIZE, this.updateSize, this);
+	    var playerId = options.playerId;
+
+	    _Clappr.Mediator.on(playerId + ':' + _Clappr.Events.PLAYER_RESIZE, this.updateSize, this);
 	    this.embedYoutubeApiScript();
 	  }
 

@@ -1,6 +1,6 @@
 {
-  "name": "clappr-youtube-playback",
-  "version": "0.0.0",
+  "name": "infinety-clappr",
+  "version": "0.0.1",
   "main": "dist/clappr-youtube-playback.js",
   "files": [
     "dist"

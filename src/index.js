@@ -1,4 +1,4 @@
-import {Events, Playback, Mediator, Styler, template} from 'Clappr'
+import {Events, Playback, Mediator, Styler, template} from 'clappr'
 
 import playbackStyle from './public/style.css'
 import playbackHtml from './public/youtube.html'

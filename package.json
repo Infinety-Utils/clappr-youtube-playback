@@ -1,17 +1,17 @@
 {
   "name": "clappr-youtube-playback",
-  "version": "0.0.3",
+  "version": "0.0.0",
   "main": "dist/clappr-youtube-playback.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "release": "node_modules/.bin/webpack --progress -d --optimize-minimize --optimize-dedupe --output-filename youtube_playback.min.js",
-    "build": "node_modules/.bin/webpack --progress",
-    "watch": "node_modules/.bin/webpack --progress --watch",
-    "lint": "node_modules/.bin/eslint src",
+    "release": "webpack --progress -d --optimize-minimize --optimize-dedupe --output-filename youtube_playback.min.js",
+    "build": "webpack --progress",
+    "watch": "webpack --progress --watch",
+    "lint": "eslint src",
     "test": "karma start --single-run --browsers Chrome",
-    "start": "node_modules/.bin/webpack-dev-server --content-base public/ --output-public-path /latest --hot",
+    "start": "webpack-dev-server --content-base public/ --output-public-path /latest --hot",
     "lock": "rm -rf npm-shrinkwrap.json node_modules && npm install --silent && npm shrinkwrap"
   },
   "dependencies": {
@@ -33,5 +33,20 @@
     "url-loader": "^0.5.6",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
-  }
+  },
+  "description": "Clappr plugin for playing YouTube based videos",
+  "bin": {
+    "clappr-youtube-playback": "hook.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Infinety-Utils/clappr-youtube-playback.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Infinety-Utils/clappr-youtube-playback/issues"
+  },
+  "homepage": "https://github.com/Infinety-Utils/clappr-youtube-playback#readme"
 }
